@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=43">
+	<script src="./common/js/swiper3.06.min.js"></script>
+	<script src="./common/js/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./common/css/swiper3.06.min.css">
+	<script type="text/javascript" src="http://js.tarsocial.com/h5stat-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./common/js/h5stat-2.1.1.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="./common/js/jweixin-1.0.0.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+	<script src="./common/js/weixincontrol.4.1.js"></script>
+	<link rel="stylesheet" href="./common/css/weui.css" />
+	<script type="text/javascript" src="./js/api.js?v=19"></script>
+
+
+
+</head>
+
+<body>
+	<div style="display: none;">
+		<audio id="bg_audio" loop="true">
+			<source src="" type="audio/mpeg">
+		</audio>
+	</div>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide p1">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="logo"><img src="img/p1/logo.png" alt=""></div>
+				<div class="title">
+					<img src="img/p1/title.png" alt="">
+					<div class="dec"><img src="img/p1/dec.png" alt=""></div>
+				</div>
+				<div class="circle">
+					<img src="img/p1/others.png" alt="" class="dark">
+					<div class="r1"><img src="img/p1/c1.png" alt=""></div>
+					<div class="r2"><img src="img/p1/c2.png" alt=""></div>
+					<div class="r3"><img src="img/p1/c3.png" alt=""></div>
+					<div class="r4"><img src="img/p1/c4.png" alt=""></div>
+					<div class="t1"><img src="img/p1/t1.png" alt=""></div>
+					<div class="t2"><img src="img/p1/t2.png" alt=""></div>
+					<div class="t3"><img src="img/p1/t3.png" alt=""></div>
+					<div class="t4"><img src="img/p1/t4.png" alt=""></div>
+				</div>
+				<div class="start">
+					<img src="img/p1/start.png" alt="" ontouchstart="startFace()">
+					<div class="num">已有<span>0</span>名同学参与测试</div>
+				</div>
+			</div>
+			<div class="swiper-slide p2">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="title"><img src="img/p2/title.png"></div>
+					<div class="pic">
+						<img src="img/p2/person.png?v=2">
+						<input type="file" accept="image/*" >
+					</div>
+					<div class="border"><img src="img/p2/border.png"></div>
+					<div class="dec">
+						<img src="img/p2/dec.png" alt="">
+						
+					</div>
+					<div class="upload">
+						<img src="img/p2/upload.png" alt="">
+						<input type="file" accept="image/*" >
+					</div>
+					<div class="jump" ontouchstart="noPic()"><img src="img/p2/jump.png" alt=""></div>
+					<div class="line"><img src="img/p2/line.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-slide p3">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="photo"><img src="img/p2/person.png?v=3"></div>
+					<canvas id="canvas" width="250" height="250">
+					</canvas>
+					<div class="border"><img src="img/p2/border.png"></div>
+					<div class="dec">
+						<span>2568947310</span>
+						<span>5869412375915</span>
+						<span>5689412378915263</span>
+					</div>
+					<div class="line"><img src="img/p2/line.png" alt=""></div>
+					<div class="ing"><img src="img/p3/ing.png" alt=""></div>
+					<div class="progress">
+						<span class="proLength"></span>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide p4">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="title"><img src="img/p4/title.png" alt=""></div>
+					<div class="sex">
+						<img src="img/p4/sex.png" alt="">
+						<div class="male chooseLi" ontouchstart="choose('male')">
+							<span class="female-custom"></span>
+							<label for="male">男</label>
+							<input type="radio" name="sex" id="male">
+						</div>
+						<div class="female chooseLi" ontouchstart="choose('female')">
+							<span class="female-custom"></span>
+							<label for="female">女</label>
+							<input type="radio" name="sex" id="female">
+						</div>
+					</div>
+					<div class="age">
+						<img src="img/p4/age.png?v=123" alt="">
+						<div class="ageNum">29</div>
+						<input type="range">
+					</div>
+					<div class="city">
+						<img src="img/p4/city.png?v=12" alt="">
+						<div class="tip"><img src="img/p4/tip.png" alt=""></div>
+						<div class="cityResult"></div>
+						<form name="frm">
+							<select id="s1" class="s1">
+								<option>省份</option>
+							</select>
+							<select id="s2" class="s2">
+								<option>地级市</option>
+							</select>
+							<select id="s3" style="display:none">
+								<option>地级市</option>
+							</select>	
+						</form>
+						
+					</div>
+					<div class="user"><img src="img/p4/change.png" alt=""></div>
+				</div>
+				<div class="next" ontouchstart="nextPage()"><img src="img/p4/next.png" alt=""></div>
+			</div>
+			<div class="swiper-slide p5">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="title"><img src="img/p5/title.png" alt=""></div>
+					<div class="choose">
+						<img src="img/p5/circle.png" alt=>
+						<ul>
+							<li><img src="img/p5/p1.png" alt=""></li>
+							<li><img src="img/p5/p2.png" alt=""></li>
+							<li><img src="img/p5/p3.png" alt=""></li>
+							<li><img src="img/p5/p4.png" alt=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide p6">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="title"><img src="img/p6/title.png" alt=""></div>
+					<div class="result">
+						<div class="person"><img src="img/p6/r1.png" alt=""></div>
+						<img src="img/p6/circle.png" alt=>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide p7">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="title"><img src="img/p7/title.png" alt=""></div>
+					<div class="money">
+						<img src="img/p7/money.png" alt="" class="moneybox">
+						<div class="moneyNum">
+							<img src="img/p7/moneyNum.png" alt="">
+							<span class="income">45万</span>
+						</div>
+						<input type="range">
+					</div>
+					<div class="children">
+						<img src="img/p7/child.png" alt="">
+						<div class="oneChild chooseLi" ontouchstart="choose('oneChild')">
+							<span class="female-custom active"></span>
+							<label for="oneChild">1个</label>
+							<input type="radio" name="childNum" id="oneChild">
+						</div>
+						<div class="twoChild chooseLi" ontouchstart="choose('twoChild')">
+							<span class="female-custom"></span>
+							<label for="twoChild">2个</label>
+							<input type="radio" name="childNum" id="twoChild">
+						</div>
+						<div class="threeChild chooseLi" ontouchstart="choose('threeChild')">
+							<span class="female-custom"></span>
+							<label for="threeChild">3个及以上</label>
+							<input type="radio" name="childNum" id="threeChild">
+						</div>
+					</div>
+					<div class="security">
+						<img src="img/p7/shebao.png" alt="">
+						<div class="Ysecurity chooseLi" ontouchstart="choose('Ysecurity')">
+							<span class="female-custom active"></span>
+							<label for="Ysecurity">有</label>
+							<input type="radio" name="security" id="Ysecurity">
+						</div>
+						<div class="Nsecurity chooseLi" ontouchstart="choose('Nsecurity')">
+							<span class="female-custom"></span>
+							<label for="Nsecurity">无</label>
+							<input type="radio" name="security" id="Nsecurity">
+						</div>
+					</div>
+				</div>
+				<div class="next" ontouchstart="nextPage()"><img src="img/p4/next.png" alt=""></div>				
+			</div>
+			<div class="swiper-slide p8">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="title"><img src="img/p8/title.png" alt=""></div>
+					<div class="job">
+						<img src="img/p8/job.png" alt="">
+						<div class="job1 chooseLi" ontouchstart="choose('job1')">
+							<span class="female-custom active"></span>
+							<label for="job1">企业高管</label>
+							<input type="radio" name="job" id="job1">
+						</div>
+						<div class="job2 chooseLi" ontouchstart="choose('job2')">
+							<span class="female-custom"></span>
+							<label for="job1">企业白领</label>
+							<input type="radio" name="job" id="job2">
+						</div>
+						<div class="job3 chooseLi" ontouchstart="choose('job3')">
+							<span class="female-custom"></span>
+							<label for="job3">个体户（私营业主）</label>
+							<input type="radio" name="job" id="job3">
+						</div>
+						<div class="job4 chooseLi" ontouchstart="choose('job4')">
+							<span class="female-custom"></span>
+							<label for="job4">其他（医生、律师、警察等）</label>
+							<input type="radio" name="job" id="job4">
+						</div>
+					</div>
+					<div class="house">
+						<img src="img/p8/house.png" alt="">
+						<div class="Yhouse chooseLi" ontouchstart="choose('Yhouse')">
+							<span class="female-custom active"></span>
+							<label for="Yhouse">有</label>
+							<input type="radio" name="house" id="Yhouse">
+						</div>
+						<div class="Nhouse chooseLi" ontouchstart="choose('Nhouse')">
+							<span class="female-custom"></span>
+							<label for="Nhouse">无</label>
+							<input type="radio" name="house" id="Nhouse">
+						</div>
+					</div>
+					<div class="car">
+						<img src="img/p8/car.png" alt="">
+						<div class="Ycar chooseLi" ontouchstart="choose('Ycar')">
+							<span class="female-custom active"></span>
+							<label for="Ycar">有</label>
+							<input type="radio" name="car" id="Ycar">
+						</div>
+						<div class="Ncar chooseLi"  ontouchstart="choose('Ncar')">
+							<span class="female-custom"></span>
+							<label for="Ncar">无</label>
+							<input type="radio" name="car" id="Ncar">
+						</div>
+					</div>
+					<div class="loan">
+						<img src="img/p8/loan.png" alt="" >
+						<div class="Yloan chooseLi" ontouchstart="choose('Yloan')">
+							<span class="female-custom active"></span>
+							<label for="Yloan">有</label>
+							<input type="radio" name="loan" id="Yloan">
+						</div>
+						<div class="Nloan chooseLi"  ontouchstart="choose('Nloan')">
+							<span class="female-custom"></span>
+							<label for="Nloan">无</label>
+							<input type="radio" name="loan" id="Nloan">
+						</div>
+					</div>
+					<div class="watch" ontouchstart="beauty()"><img src="img/p8/watch.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-slide p9">
+				<div class="Bg"><img src="img/p9/bg.jpg?v=3" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="c1"><img src="img/p9/c1.png" alt=""></div>		
+					<div class="c2"><img src="img/p9/c2.png" alt=""></div>		
+					<div class="c3"><img src="img/p9/c3.png" alt=""></div>
+					<div class="w1"><img src="img/p9/t1.png" alt=""></div>		
+					<div class="w2"><img src="img/p9/t2.png" alt=""></div>		
+					<div class="w3"><img src="img/p9/t3.png" alt=""></div>		
+					<div class="line1"><img src="img/p9/line1.png" alt=""></div>		
+					<div class="line2"><img src="img/p9/line2.png" alt=""></div>		
+				</div>
+			</div>
+			<div class="swiper-slide p10">
+				<div class="Bg"><img src="img/p10/bg.jpg" alt=""></div>
+				<div class="title"><img src="img/p10/title.png" alt=""></div>
+				<div class="face">
+					<img src="img/p10/box.png" alt="">
+					<div class="photo"><img src="img/p10/moren2.png?v=3" alt=""></div>
+					<div class="d1">
+						<img src="img/p10/d1.png" alt="">
+						<div>年轻有为</div>
+					</div>
+					<div class="d2">
+						<img src="img/p10/d2.png" alt="">
+						<div>未知</div>
+					</div>
+					<div class="d3">
+						<img src="img/p10/d3.png" alt="">
+						<div>上海市</div>
+					</div>
+					<div class="d4">
+						<img src="img/p10/d4.png" alt="">
+						<div>男</div>
+					</div>
+					<div class="d5">
+						<img src="img/p10/d5.png" alt="">
+						<div>29岁</div>
+					</div>
+					<div class="score">
+						<img src="img/p10/score.png" alt="">
+						<div>颜值得分：<span>99分</span></div>
+					</div>
+				</div>
+				<div class="plan">
+					<img src="img/p10/plan3.png" alt="">
+					<div class="dec"><img src="img/p10/dec.png" alt=""></div>
+					<div class="watch" ontouchstart="face()"><img src="img/p10/watch.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-slide p11" id="#p11">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="title"><img src="img/p11/title.png" alt=""></div>
+				<div class="tNum">
+					<img src="img/p11/zongbox.png" alt="" style="position: absolute;">
+					<div style="margin-top:5%">您的颜值：<span class="point">未知</span>，击败了<span class="cent">0</span>%的人，</div>
+					<div>根据大数据运算，为了保护您的颜值</div>
+					<div>一共需要<span class="worth">0万</span>保障</div>>
+				</div>
+				<div id="radar"></div>
+				<div class="product">
+					<img src="img/p11/b1.png" alt="" style="opacity: 0;">
+					<ul class="insurance">
+					</ul>
+					<div class="more" ontouchstart="more()"><img src="img/p11/more.png" alt=""></div>
+					<div class="share" ontouchstart="mask()"><img src="img/p11/share.png" alt=""></div>
+				</div>		
+			</div>
+			<div class="swiper-slide p12">
+				<div class="Bg"><img src="img/p12/bg.jpg" alt=""></div>
+				<div class="title"><img src="img/p12/title.png" alt=""></div>
+				<div class="round">
+					<img src="img/p12/line.png" alt="">
+					<div class="gift" id="gift"><img src="img/p12/circle2.png" alt=""></div>
+					<div class="click" onclick="gift()"><img src="img/p12/click.png" alt="" style="z-index:222"></div>
+					<div class="atten">
+						<img src="img/p12/atten.png" alt="">	
+					</div>
+					<ul class="winners">
+					</ul>
+					<div class="dec"><img src="img/p12/dec.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-slide p13">
+				<div class="Bg"><img src="img/p1/bg.jpg" alt=""></div>
+				<div class="box">
+					<img src="img/p9/box.png" alt="">
+					<div class="gift">
+						<img src="img/gift/gift.png" alt="">
+						<div>恭喜您获得<span class="winner"></span></div>
+					</div>		
+					<ul class="info">
+						<li>
+							<img src="img/gift/name.png" alt="">
+							<input type="text">
+						</li>
+						<li>
+							<img src="img/gift/phone.png" alt="">
+							<input type="tel">
+						</li>
+						<li>
+							<img src="img/gift/address.png" alt="">
+							<input type="text">
+						</li>
+					</ul>
+					<div class="submit" ontouchstart="winInfo()"><img src="img/gift/submit.png" alt=""></div>	
+							
+				</div>
+			</div>
+			<div class="swiper-slide p14">
+					<div class="Bg"><img src="img/p14/bg.jpg" alt=""></div>
+					<div class="box">
+						<img src="img/p9/box.png" alt="">
+						<div class="ok"><img src="img/p14/ok.png" alt=""></div>										
+						<div class="no"><img src="img/p14/no.png" alt=""></div>										
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="mask" ontouchstart="maskHide()">
+		<div class="tip"><img src="img/mask/tip.png" alt=""></div>
+	</div>
+
+</body>
+<script type="text/javascript" src="./js/echarts.js"></script>
+<script type="text/javascript" src="./js/range.js"></script>
+<script type="text/javascript" src="./js/city.js"></script>
+<script type="text/javascript" src="./js/index.js?v=999"></script>
+</html>
