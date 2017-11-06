@@ -2,7 +2,7 @@ var WeiXinConfig = function(){
 
     var wx_scope,wx_oauth_appid,wx_share_appid,wx_callback_url,wx_debug;
     var C_APPID;
-    //æŽˆæƒappidåœ¨APPID_ARRä¸­C_APPID=wxd8ca4f9b12c1f306ï¼Œæ‰èƒ½å®Œæˆå†…éƒ¨å…¬ä¼—å·æŽˆæƒ
+    ////授权appid在APPID_ARR中C_APPID=wxd8ca4f9b12c1f306，才能完成内部公众号授权
     var APPID_ARR = ['wx522612908ac74c9c','wx2146e80f40ccb9a2','wx2b6316e75157fd10','wx4ee881be25cc499b','wx6e40c992d0e1789c','wx8464e248296848a6','wxabc64e199ab51ddd','wxae443fc803e5af1c','wxb0dd47d740a0b327','wxe512506924dfd7b6','wxfa065f3046ad9c21','wx03d4e22cfa146659','wx8c40f76a9c5355e7']
     var ev = this;
     ev.cbready = function(){};
