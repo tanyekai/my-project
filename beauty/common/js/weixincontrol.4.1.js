@@ -2,7 +2,7 @@ var WeiXinConfig = function(){
 
     var wx_scope,wx_oauth_appid,wx_share_appid,wx_callback_url,wx_debug;
     var C_APPID;
-    //授权appid在APPID_ARR中C_APPID=wxd8ca4f9b12c1f306，才能完成内部公众号授权
+    //æŽˆæƒappidåœ¨APPID_ARRä¸­C_APPID=wxd8ca4f9b12c1f306ï¼Œæ‰èƒ½å®Œæˆå†…éƒ¨å…¬ä¼—å·æŽˆæƒ
     var APPID_ARR = ['wx522612908ac74c9c','wx2146e80f40ccb9a2','wx2b6316e75157fd10','wx4ee881be25cc499b','wx6e40c992d0e1789c','wx8464e248296848a6','wxabc64e199ab51ddd','wxae443fc803e5af1c','wxb0dd47d740a0b327','wxe512506924dfd7b6','wxfa065f3046ad9c21','wx03d4e22cfa146659','wx8c40f76a9c5355e7']
     var ev = this;
     ev.cbready = function(){};
@@ -23,7 +23,7 @@ var WeiXinConfig = function(){
                 try {
                     xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
                 } catch (e) {
-                    alert("您的浏览器不支持AJAX�?");
+                    alert("æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒAJAXï¼?");
                     return false;
                 }
             }
@@ -50,14 +50,14 @@ var WeiXinConfig = function(){
         xmlhttp.send(indent);
     }
     /**
-     * 使用场景
-     * ajax提交数据格式是多维数�?
+     *  使用场景
+     * ajax提交数据格式是多维数据
      */
     ev.ajax2 = function(url,parameter,callback,tar_wx_ajax_methodtype,tar_wx_ajax_con){
         var xmlhttp=ev.getajaxHttp();
         xmlhttp.onreadystatechange=function(){
             if(xmlhttp.readyState==4){
-                //HTTP响应已经完全接收才调�?
+               //HTTP响应已经完全接收才调用
                 var xml = eval('(' + xmlhttp.response + ')');
                 if(xml.errcode == 40001){
                     localStorage.clear();
@@ -102,14 +102,14 @@ var WeiXinConfig = function(){
 
     /**
      * 使用场景
-     * ajax提交数据格式非多维数�?
-     * 上传图片（base64�?
+     * ajax提交数据格式非多维数据
+     * 上传图片（base64）
      */
     ev.ajax = function(url,parameter,callback,tar_wx_ajax_methodtype,tar_wx_ajax_con){
         var xmlhttp=ev.getajaxHttp();
         xmlhttp.onreadystatechange=function(){
             if(xmlhttp.readyState==4){
-                //HTTP响应已经完全接收才调�?
+               //HTTP响应已经完全接收才调用
                 var xml = eval('(' + xmlhttp.response + ')');
                 if(xml.errcode == 40001){
                     localStorage.clear();
@@ -140,7 +140,7 @@ var WeiXinConfig = function(){
 
 
     /*
-     * getUrlParam:获取URL参数
+     *getUrlParam:获取URL参数
      * delQueStr  :删除URL参数
      */
     ev.getUrlParam = function(name) {
@@ -182,7 +182,7 @@ var WeiXinConfig = function(){
     }
 
     /*
-     * SetVal:设置localStorage
+     *SetVal:设置localStorage
      * GetVal:获取localStorage
      * RemoveKey:删除localStorage
      */
@@ -200,7 +200,7 @@ var WeiXinConfig = function(){
     }
 
     /*
-     * 以下是微信授权分享机制代�?
+     * 以下是微信授权分享机制代码
      */
     ev.TokenCallback = function(xmlhttp){
         var response = xmlhttp.response;
@@ -209,7 +209,7 @@ var WeiXinConfig = function(){
         var data = response.data;
         var appid = ev.GetVal("appid");
         if(token){
-            //获取用户信息
+           //获取用户信息
             wx_userinfo = response.data;
             ev.SetVal(appid+"_token", token);
             ev.SetVal(appid+"_openid", data.openid);
